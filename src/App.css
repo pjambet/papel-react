@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #fafafa;
+}
+
+#root {
+  margin: 0 auto;
+  width: 900px;
+  min-height: 15em;
+}
+
+.DraftEditor-root {
+}
+
+.DraftEditor-editorContainer {
+
+}
+
+.public-DraftEditor-content {
+  /* border: 1px solid red; */
+}
+
+.public-DraftEditor-content [data-block=true]:first-child {
+  font-size: 22px;
+}
+
+.public-DraftEditor-content [data-block=true]:nth-child(2) {
+  padding-top: 10px;
+}
+
+.public-DraftEditor-content [data-block=true]:not(:first-child) {
+  font-size: 16px;
+  color: #0a0a0a;
+}
+
+.separator {
+  height: 1px;
+  background: black;
+  width: 200px;
+  margin: 30px auto;
+}
