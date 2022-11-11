@@ -77,3 +77,52 @@ body {
   width: 200px;
   margin: 30px auto;
 }
+
+textarea {
+  min-height: 1em;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  height: 1em;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0 auto;
+  width: 900px;
+  display: block;
+  text-align: left;
+  /* border: 1px solid red; */
+  appearance: none;
+  padding: 4px;
+  overflow: hidden;
+}
+
+#recent {
+  margin: 0 auto;
+  width: 900px;
+}
+
+#flex {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-flow: column wrap;
+  align-content: stretch;
+  max-height: 70px;
+}
+
+ul li {
+  /* display: block; */
+}
+
+#root {
+  position: relative;
+}
+
+.floating-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: darkgray;
+  font-size: 0.8em;  
+}
+

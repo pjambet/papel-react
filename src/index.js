@@ -11,7 +11,7 @@ class MyEditor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {editorState: EditorState.createEmpty()};
-    this.onChange = (editorState) => this.setState({editorState});
+    this.onChange = this.handleChange.bind(this);
     this.setEditor = (editor) => {
       this.editor = editor;
     };
@@ -22,8 +22,14 @@ class MyEditor extends React.Component {
     };
   }
 
+  handleChange(editorState) {
+    console.log(editorState);
+    this.setState({editorState});
+  }
+
   componentDidMount() {
     this.focusEditor();
+    document.body.classList.remove("hidden");
   }
 
   myBlockStyleFn(contentBlock) {
@@ -45,6 +51,7 @@ class MyEditor extends React.Component {
           placeholder="What did you learn today?"
           blockStyleFn={this.myBlockStyleFn}
         />
+        <div className="floating-status"></div>
       </div>
     );
   }
